@@ -1,5 +1,5 @@
 //
-//  MemeModel.swift
+//  Meme.swift
 //  MemeApp
 //
 //  Created by Abdulla Hasanov on 11/15/19.

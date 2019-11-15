@@ -33,7 +33,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  -5
+        NSAttributedString.Key.strokeWidth:  -3.5
     ]
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +60,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
-        print("Image picking canceled")
+        debugPrint("Image picking canceled")
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -74,7 +74,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {(type,completed,items,error) in
                 if let _ = error {
-                    print("Something gone wrong")
+                    debugPrint("Something gone wrong")
                     return
                 }
                 if completed {
@@ -154,7 +154,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
         case 1:
             imagePicker.sourceType = .camera
         default:
-            print("no source type for this button")
+            debugPrint("no source type for this button")
         }
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)

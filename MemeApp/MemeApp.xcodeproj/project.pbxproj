@@ -13,7 +13,7 @@
 		BD2CBF2E237DC28B00982DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2CBF2C237DC28B00982DAF /* Main.storyboard */; };
 		BD2CBF30237DC28C00982DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2CBF2F237DC28C00982DAF /* Assets.xcassets */; };
 		BD2CBF33237DC28C00982DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2CBF31237DC28C00982DAF /* LaunchScreen.storyboard */; };
-		BDCCE516237DEF3A00DE4EF6 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCCE515237DEF3A00DE4EF6 /* MemeModel.swift */; };
+		BDCCE516237DEF3A00DE4EF6 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCCE515237DEF3A00DE4EF6 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		BD2CBF2F237DC28C00982DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2CBF32237DC28C00982DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD2CBF34237DC28C00982DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDCCE515237DEF3A00DE4EF6 /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
+		BDCCE515237DEF3A00DE4EF6 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				BD2CBF2F237DC28C00982DAF /* Assets.xcassets */,
 				BD2CBF31237DC28C00982DAF /* LaunchScreen.storyboard */,
 				BD2CBF34237DC28C00982DAF /* Info.plist */,
-				BDCCE515237DEF3A00DE4EF6 /* MemeModel.swift */,
+				BDCCE515237DEF3A00DE4EF6 /* Meme.swift */,
 			);
 			path = MemeApp;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 				BD2CBF2B237DC28B00982DAF /* MemeViewController.swift in Sources */,
 				BD2CBF27237DC28B00982DAF /* AppDelegate.swift in Sources */,
 				BD2CBF29237DC28B00982DAF /* SceneDelegate.swift in Sources */,
-				BDCCE516237DEF3A00DE4EF6 /* MemeModel.swift in Sources */,
+				BDCCE516237DEF3A00DE4EF6 /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

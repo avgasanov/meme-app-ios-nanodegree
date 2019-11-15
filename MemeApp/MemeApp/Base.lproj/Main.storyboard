@@ -52,7 +52,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="KTd-fN-ym4" userLabel="TopTextField">
-                                <rect key="frame" x="0.0" y="152" width="414" height="48.5"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="48.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="TOP">
                                         <attributes>
@@ -65,7 +65,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="guC-7Z-h6H" userLabel="BottomTextField">
-                                <rect key="frame" x="0.0" y="700.5" width="414" height="48.5"/>
+                                <rect key="frame" x="0.0" y="748.5" width="414" height="48.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="BOTTOM">
                                         <attributes>
@@ -90,10 +90,10 @@
                             <constraint firstItem="O0B-L8-Mzk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UBb-cp-q6X"/>
                             <constraint firstItem="kmo-az-uGJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XL9-K8-evB"/>
                             <constraint firstItem="O0B-L8-Mzk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YpP-Xn-7ZT"/>
-                            <constraint firstItem="guC-7Z-h6H" firstAttribute="bottom" secondItem="4dy-JD-BdM" secondAttribute="bottom" constant="-64" id="aOc-m1-lvT"/>
+                            <constraint firstItem="guC-7Z-h6H" firstAttribute="bottom" secondItem="4dy-JD-BdM" secondAttribute="bottom" constant="-16" id="aOc-m1-lvT"/>
                             <constraint firstItem="4dy-JD-BdM" firstAttribute="bottom" secondItem="O0B-L8-Mzk" secondAttribute="top" id="dFs-4J-AOT"/>
                             <constraint firstItem="O0B-L8-Mzk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f88-a8-GuQ"/>
-                            <constraint firstItem="KTd-fN-ym4" firstAttribute="top" secondItem="4dy-JD-BdM" secondAttribute="top" constant="64" id="gWd-KT-Iss"/>
+                            <constraint firstItem="KTd-fN-ym4" firstAttribute="top" secondItem="4dy-JD-BdM" secondAttribute="top" constant="16" id="gWd-KT-Iss"/>
                             <constraint firstItem="kmo-az-uGJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rN9-GZ-zeg"/>
                             <constraint firstItem="guC-7Z-h6H" firstAttribute="trailing" secondItem="4dy-JD-BdM" secondAttribute="trailing" id="rmg-da-9ob"/>
                             <constraint firstItem="KTd-fN-ym4" firstAttribute="trailing" secondItem="4dy-JD-BdM" secondAttribute="trailing" id="t6e-m5-J0x"/>
