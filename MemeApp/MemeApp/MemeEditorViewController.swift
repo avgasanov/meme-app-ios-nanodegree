@@ -1,5 +1,5 @@
 //
-//  MemeViewController.swift
+//  MemeEditorViewController.swift
 //  MemeApp
 //
 //  Created by Abdulla Hasanov on 11/14/19.
@@ -11,7 +11,7 @@
 
 import UIKit
 
-class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate,
             UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -21,9 +21,10 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
+
+    var presentingVC: UIViewController?
     
-    var savedMeme: Meme?
-    
+    var savedMeme: Meme?    
     var activeField: UITextField?
     
     let TOP_TEXT_PLACEHOLDER = "TOP"
@@ -64,13 +65,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func cancel(_ sender: Any) {
-        savedMeme = nil
-        topTextField.text = TOP_TEXT_PLACEHOLDER
-        bottomTextField.text = BOTTOM_TEXT_PLACEHOLDER
-        imagePickerView.image = nil
-        shareButton.isEnabled = false
+        dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func share(_ sender: Any) {
+        let generatedMeme = generateMemedImage();
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {(type,completed,items,error) in
                 if let _ = error {
@@ -78,22 +77,26 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate,
                     return
                 }
                 if completed {
-                    self.save()
+                    self.save(generatedMeme)
+                    if let parent = self.presentingVC {
+                        parent.saveCompleted()
+                    }
                 }
             }
         self.present(activityViewController, animated: true, completion: nil)
     }
     
-    func save() {
+    func save(_ generatedMeme : UIImage) {
         let bottomText = bottomTextField.text!
         let topText = topTextField.text!
         let originalImage = imagePickerView.image ?? nil
         if originalImage == nil {
             return
         }
-        let memedImage = generateMemedImage()
-        savedMeme = Meme(topText: topText, bottomText: bottomText,
-                               originalImage: originalImage!, memedImage: memedImage)
+        let meme = Meme(topText: topText, bottomText: bottomText,
+                               originalImage: originalImage!, memedImage: generatedMeme)
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
+        print((UIApplication.shared.delegate as! AppDelegate).memes.count)
     }
     
     func generateMemedImage() -> UIImage {
